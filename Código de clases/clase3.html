@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase: Bloques, Lineas y semantica de html5</title>
+</head>
+<body>
+    <header>
+        <h1> Guia interactiva: Estructura, atributos y tablas </h1>
+        <p> Este documento no tiene css. <span style="color: blue;">Todo el diseño</span>  y las posiciones son nativas del navegador </p>
+
+        <!-- la etiqueta nav sirve para la navegacion -->
+        <nav>
+            <ul>
+                <li> <a href="#bloque">Elementos en bloque</a> </li>
+                <li> <a href="#linea">Elementos en linea </a> </li>
+                <li> <a href="#tabla">Estructura semantica</a> </li>
+            </ul>
+        </nav>
+        <!-- hr es una linea horizontal, se usa para dividir -->
+        <hr>
+    </header>
+    <main>
+        <section id="bloque">
+            <h2> Elementos en bloque (Bock)</h2>
+            <p> <strong> Regla de oro: </strong>   Estos elementos siempre empiezan en una nueva linea y ocupan el 100% del ancho disponible </p>
+
+            <div style="background-color: gray;"> Soy un div </div>
+            <p>Soy un párrafo. Agrupo texto y dejo margen arriba y abajo</p>
+
+            <blockquote>Soy un blockquote. Se usa para citas textuales y suele tener un margen lateral por defecto.</blockquote>
+
+            <h3>Jerarquía de títulos (Encabezado - headings)</h3>
+            <h4>Título nivel 4</h4>
+            <h5>Título nivel 5</h5>
+            <h6>Título nivel 6</h6>
+
+            <ul>
+                <li>Yo soy un li - Item de lista</li>
+                <li>También soy un elemento en bloque</li>
+            </ul>
+        </section>
+
+        <section id="linea">
+            <h2>Elementos en línea (Inline)</h2>
+            <p><strong>Regla de oro:</strong> Estos elementos solo ocupan el ancho necesario para su contenido y no generan saltos de línea.</p>
+
+            <p>Dentro de este párrafo (en bloque), tengo un <span style="color: blueviolet;">span, que es un contenedor en línea.</span> También puedo usar <strong>strong para negrita</strong>y <em>em para cursiva</em> <i>Además tenemos la eriqueta i.</i>Todo fluye en el mismo renglón</p>
+
+            <p>Además tenemos los enlaces que también son etiquetas en línea</p>
+
+            <a href="http://www.google.com" target="_blank" title="Busca cualquier cosa">Google</a>
+            <a href="www.github.com" title="el hogar del código">github</a>
+            <a href="../pdf/Elementos en linea y en bloque.pdf" target="_blank">Elementos en bloque y en línea</a>
+            <p>Las imágenes también son elementos en línea</p>
+
+            <img src="https://th.bing.com/th/id/R.80554de8845b7e254c75edd6838ecbf5?rik=gn1Edjvy1bRdbw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3miGETYWTJk%2fTVmYYFoSlLI%2fAAAAAAAAABo%2fCbbdS51k2Bo%2fs1600%2fgatito.jpg&ehk=yGTWTqalxxhqVwTIC213yBQJH0UUVfS6j5mlDGATn2g%3d&risl=&pid=ImgRaw&r=0" alt="Gatito bebe" style="width: 30%;">
+
+             <img src="https://th.bing.com/th/id/R.80554de8845b7e254c75edd6838ecbf5?rik=gn1Edjvy1bRdbw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3miGETYWTJk%2fTVmYYFoSlLI%2fAAAAAAAAABo%2fCbbdS51k2Bo%2fs1600%2fgatito.jpg&ehk=yGTWTqalxxhqVwTIC213yBQJH0UUVfS6j5mlDGATn2g%3d&risl=&pid=ImgRaw&r=0" alt="Gatito bebe" style="width: 30%;">
+            <!-- Como el div es el padre de la imagen, es quien define el display -->
+            <div>
+                 <img src="https://th.bing.com/th/id/R.80554de8845b7e254c75edd6838ecbf5?rik=gn1Edjvy1bRdbw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3miGETYWTJk%2fTVmYYFoSlLI%2fAAAAAAAAABo%2fCbbdS51k2Bo%2fs1600%2fgatito.jpg&ehk=yGTWTqalxxhqVwTIC213yBQJH0UUVfS6j5mlDGATn2g%3d&risl=&pid=ImgRaw&r=0" alt="Gatito bebe" style="width: 30%;">
+            </div>
+
+            <p>Etiquetas pequeñas <small>Yo soy un texto pequeño</small></p>
+        </section>
+
+        <hr>
+
+        <section id="tabla">
+            <h2>Representación de datos</h2>
+            <p>Las tablas se usan para datos estructurados, no para el diseño de las páginas</p>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Profesor</th>
+                        <th>Materia</th>
+                        <th>Alumno destacado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>11222333</td>
+                        <td>Perez Juan</td>
+                        <td>Física cuántica</td>
+                        <td>Einstein Albert</td>
+                    </tr>
+                    <tr>
+                        <td>22333444</td>
+                        <td>García Ana</td>
+                        <td>Artes marciales</td>
+                        <td>Lee Bruce</td>
+                    </tr>
+                    <tr>
+                        <td>33444555</td>
+                        <td>Ruíz Carlos</td>
+                        <td>Piloto de B2 Spirit</td>
+                        <td>Mitchell Pete alias "Maverick"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <form action="#" method="get">
+          <div>
+            <!-- El label del input debe ser igual al name del input -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre">
+          </div>
+
+          <div>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña">
+          </div>
+
+          <div>
+            <label for="email">email:</label>
+            <input type="email" name="email">
+          </div>
+
+          <div>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad">
+          </div>
+
+          <div>
+            <label for="fecha-de-nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="fecha-de-nacimiento">
+          </div>
+
+          <div>
+            <label for="color-favorito">Color favorito</label>
+            <input type="color" name="color">
+          </div>
+
+          <div>
+            <p>Género</p>
+            <!-- En radio el name debe ser igual en todas las opciones, solo permite una opción elegida -->
+            <input type="radio" id="g-masc" name="genero" value="m">
+            <label for="g-masc">Masculino</label>
+            <input type="radio" id="g-fem" name="genero" value="f">
+            <label for="g-fem">Femenino</label>
+          </div>
+          
+          <p>
+            <label for="usr-opt">Nivel de Estudio:</label>
+            <select id="usr-opt" name="nivel">
+              <option value="pri">Primario</option>
+              <option value="sec">Secundario</option>
+              <option value="uni">Universitario</option>
+
+            </select>
+          </p>
+
+          <p>Preferencias</p>
+          <input type="checkbox" id="pref-html" name="interes" value="html">
+          <label for="pref-html">Amo HTML</label><br>
+          <input type="checkbox" id="pref-css" name="interes" value="css">
+          <label for="pref-css">Quiero ver CSS</label>
+
+          <p>
+            <label for="usr-msg">Mensaje Corto:</label><br>
+            <textarea 
+            name="mensaje" 
+            id="usr-msg">
+            </textarea>
+          </p>
+
+        </form>
+
+
+        <footer>
+          <p>Guía de clase - frontend básico</p>
+        </footer>
+    </main>
+</body>
+</html>
