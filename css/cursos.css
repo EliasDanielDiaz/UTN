@@ -1,0 +1,109 @@
+html, body {
+  height: 100%;
+}
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+h1, h2 {
+  color: #ffffff;              /* blanco puro */
+  text-shadow: 0 0 6px #000;   /* borde suave para contraste */
+  position: relative;
+  z-index: 2;                  
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+.curso-btn {
+    padding: 12px 20px;
+    margin: 6px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.curso-btn:hover {
+    background: #256628;
+}
+
+#panel {
+    margin-top: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #dcdcdc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #e8f5e9;
+    color: #1b4d2b;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+@media (max-width: 800px) {
+    .panel-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fondo para Cursos y Materias */
+.fondo-cursos {
+  background-image: url("../imagenes/quimica.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Capa oscura */
+.fondo-cursos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
