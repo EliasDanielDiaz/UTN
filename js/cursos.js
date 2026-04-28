@@ -377,65 +377,90 @@ const cursos = {
 /* ============================
        FUNCIÓN PARA MOSTRAR CURSO
    ============================ */
+let cursoActivo = null;
+
+function ajustarEspaciador() {
+    const panel = document.getElementById("panel");
+    const espaciador = document.getElementById("espaciadorPanel");
+
+    if (panel.classList.contains("activo")) {
+        espaciador.style.height = panel.offsetHeight + 40 + "px";
+    } else {
+        espaciador.style.height = "0px";
+    }
+}
+
 function mostrar(curso) {
-  const data = cursos[curso];
+    const panel = document.getElementById("panel");
 
-  // Mostrar el título con formato correcto
-  let titulo = curso;
+    // Si el usuario toca el mismo botón → cerrar panel
+    if (cursoActivo === curso) {
+        panel.classList.remove("activo");
+        setTimeout(() => {
+            panel.style.display = "none";
+            ajustarEspaciador();
+        }, 300);
+        cursoActivo = null;
+        return;
+    }
 
-  // Reemplazar "_" por "° "
-  titulo = titulo.replace("_", "° ");
+    // Actualizar curso activo
+    cursoActivo = curso;
 
-  // Para los que tienen "a" al final (4_1a → 4° 1a)
-  titulo = titulo.replace("° 1a", "° 1a");
-  titulo = titulo.replace("° 2a", "° 2a");
+    const data = cursos[curso];
 
-  document.getElementById("tituloCurso").innerText = titulo;
+    // Mostrar el título con formato correcto
+    let titulo = curso.replace("_", "° ");
+    titulo = titulo.replace("° 1a", "° 1a");
+    titulo = titulo.replace("° 2a", "° 2a");
+    document.getElementById("tituloCurso").innerText = titulo;
 
-  // Tabla de materias
-  let tablaMaterias = `
-    <h3>Materias y Profesores</h3>
-    <table>
-      <tr><th>Materia</th><th>Profesor</th></tr>
-  `;
-
-  data.materias.forEach(m => {
-    tablaMaterias += `<tr><td>${m[0]}</td><td>${m[1]}</td></tr>`;
-  });
-
-  tablaMaterias += `</table>`;
-  document.getElementById("materias").innerHTML = tablaMaterias;
-
-  // Tabla de horarios
-  let tablaHorarios = `
-    <h3>Horarios</h3>
-    <table>
-      <tr>
-        <th>Hora</th>
-        <th>Lunes</th>
-        <th>Martes</th>
-        <th>Miércoles</th>
-        <th>Jueves</th>
-        <th>Viernes</th>
-      </tr>
-  `;
-
-  data.horarios.forEach(f => {
-    tablaHorarios += `
-      <tr>
-        <td>${f[0]}</td>
-        <td>${f[1]}</td>
-        <td>${f[2]}</td>
-        <td>${f[3]}</td>
-        <td>${f[4]}</td>
-        <td>${f[5]}</td>
-      </tr>
+    // Tabla de materias
+    let tablaMaterias = `
+        <h3>Materias y Profesores</h3>
+        <table>
+            <tr><th>Materia</th><th>Profesor</th></tr>
     `;
-  });
+    data.materias.forEach(m => {
+        tablaMaterias += `<tr><td>${m[0]}</td><td>${m[1]}</td></tr>`;
+    });
+    tablaMaterias += `</table>`;
+    document.getElementById("materias").innerHTML = tablaMaterias;
 
-  tablaHorarios += `</table>`;
-  document.getElementById("horarios").innerHTML = tablaHorarios;
+    // Tabla de horarios
+    let tablaHorarios = `
+        <h3>Horarios</h3>
+        <table>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+    `;
+    data.horarios.forEach(f => {
+        tablaHorarios += `
+            <tr>
+                <td>${f[0]}</td>
+                <td>${f[1]}</td>
+                <td>${f[2]}</td>
+                <td>${f[3]}</td>
+                <td>${f[4]}</td>
+                <td>${f[5]}</td>
+            </tr>
+        `;
+    });
+    tablaHorarios += `</table>`;
+    document.getElementById("horarios").innerHTML = tablaHorarios;
 
-  // Mostrar el panel
-  document.getElementById("panel").style.display = "block";
+    // Mostrar el panel con animación
+    panel.classList.remove("activo");
+    void panel.offsetWidth; // reinicia transición
+    panel.style.display = "block";
+    panel.classList.add("activo");
+
+    // Ajustar espaciador según el alto real del panel
+    setTimeout(ajustarEspaciador, 50);
 }

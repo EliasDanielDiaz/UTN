@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/cursos.css">
     <title>E.E.S. N° 59 | Cursos y Materias</title>
   </head>
 
@@ -31,37 +30,57 @@
     </header>
 
     <main>
+      <div id="contenedorBotones">
+        <div id="stickyWrapper">
+          <div id="barraCursosSticky">
+            <h1>Cursos y Materias</h1>
+        
+            <div class="fila-turno">
+              <div class="col-titulo">  
+              <h2 aria-label="Cursos del turno mañana">Turno Mañana</h2>
+              </div>
+          
+              <div class="col-botones botones-turno">
+                <button class="curso-btn" onclick="mostrar('AFTE')">AFTE</button>
+                <button class="curso-btn" onclick="mostrar('1_A')">1° A</button>
+                <button class="curso-btn" onclick="mostrar('1_B')">1° B</button>
+                <button class="curso-btn" onclick="mostrar('2_A')">2° A</button>
+                <button class="curso-btn" onclick="mostrar('2_B')">2° B</button>
+                <button class="curso-btn" onclick="mostrar('3_A')">3° A</button>
+                <button class="curso-btn" onclick="mostrar('3_B')">3° B</button>
+                <button class="curso-btn" onclick="mostrar('4_1a')">4° 1a</button>
+                <button class="curso-btn" onclick="mostrar('5_1a')">5° 1a</button>
+                <button class="curso-btn" onclick="mostrar('6_1a')">6° 1a</button>
+              </div>
+            </div>
+        
+            <div class="fila-turno">
+              <div class="col-titulo">
+              <h2 aria-label="Cursos del turno tarde">Turno Tarde</h2>
+              </div>
 
-      <h1>Cursos y Materias</h1>
+              <div class="col-botones botones-turno">
+                <button class="curso-btn" onclick="mostrar('1_C')">1° C</button>
+                <button class="curso-btn" onclick="mostrar('2_C')">2° C</button>
+                <button class="curso-btn" onclick="mostrar('3_C')">3° C</button>
+                <button class="curso-btn" onclick="mostrar('4_2a')">4° 2a</button>
+                <button class="curso-btn" onclick="mostrar('5_2a')">5° 2a</button>
+                <button class="curso-btn" onclick="mostrar('6_2a')">6° 2a</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <h2 aria-label="Cursos del turno mañana">Turno Mañana</h2>
-
-        <button class="curso-btn" onclick="mostrar('AFTE')">AFTE</button>
-        <button class="curso-btn" onclick="mostrar('1_A')">1° A</button>
-        <button class="curso-btn" onclick="mostrar('1_B')">1° B</button>
-        <button class="curso-btn" onclick="mostrar('2_A')">2° A</button>
-        <button class="curso-btn" onclick="mostrar('2_B')">2° B</button>
-        <button class="curso-btn" onclick="mostrar('3_A')">3° A</button>
-        <button class="curso-btn" onclick="mostrar('3_B')">3° B</button>
-        <button class="curso-btn" onclick="mostrar('4_1a')">4° 1a</button>
-        <button class="curso-btn" onclick="mostrar('5_1a')">5° 1a</button>
-        <button class="curso-btn" onclick="mostrar('6_1a')">6° 1a</button>
-
-      <h2 aria-label="Cursos del turno tarde">Turno Tarde</h2>
-        <button class="curso-btn" onclick="mostrar('1_C')">1° C</button>
-        <button class="curso-btn" onclick="mostrar('2_C')">2° C</button>
-        <button class="curso-btn" onclick="mostrar('3_C')">3° C</button>
-        <button class="curso-btn" onclick="mostrar('4_2a')">4° 2a</button>
-        <button class="curso-btn" onclick="mostrar('5_2a')">5° 2a</button>
-        <button class="curso-btn" onclick="mostrar('6_2a')">6° 2a</button>
-
-      <div id="panel">
-        <h2 id="tituloCurso"></h2>
-        <div class="panel-grid">
-          <div id="materias"></div>
-          <div id="horarios"></div>
+        <div id="panel">
+          <h2 id="tituloCurso"></h2>
+          <div class="panel-grid">
+            <div id="materias"></div>
+            <div id="horarios"></div>
+          </div>
         </div>
       </div>
+      
+      <div id="espaciadorPanel"></div>
 
     </main>
 

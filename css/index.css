@@ -1,10 +1,6 @@
-html, body {
-  height: 100%;
-}
-
-/* ======================
+/* ============================================
    PALETA DE COLORES
-   ====================== */
+============================================ */
 :root {
     --verde-oscuro: #1e3a2f;
     --verde-medio: #2e6b4f;
@@ -13,16 +9,12 @@ html, body {
     --gris-texto: #333;
 }
 
-
-/* ======================
-ESTILO GENERAL
-====================== */
+/* ============================================
+   ESTILO GENERAL
+============================================ */
 html, body {
     height: 100%;
-}
-
-main {
-    flex: 1;
+    width: 100%;
 }
 
 body {
@@ -37,35 +29,39 @@ body {
     padding: 0;
 }
 
-/* ======================
+main {
+    flex: 1;
+    padding: 10px;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* ============================================
    HEADER
-   ====================== */
+============================================ */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 30px 30px;
+    padding: 30px;
     background-image: url('https://img.freepik.com/fotos-premium/fondo-verde-abstracto-lineas-onduladas_701806-1954.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid var(--verde-claro);
+    z-index: 100;
 }
 
-/* Overlay oscuro del header */
 header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: rgba(30, 58, 47, 0.78);
     z-index: 1;
 }
 
-/* Contenido por encima del overlay */
 header > * {
     position: relative;
     z-index: 2;
@@ -90,9 +86,9 @@ header > * {
     margin: 5px 0;
 }
 
-/* ======================
+/* ============================================
    MENÚ
-   ====================== */
+============================================ */
 nav ul {
     list-style: none;
     display: flex;
@@ -116,27 +112,24 @@ nav li a {
 
 nav li a:hover {
     background-color: var(--verde-claro);
-    color: white;
     border-color: var(--verde-claro);
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ======================
+/* ============================================
    CARRUSEL HERO
-   ====================== */
+============================================ */
 .carousel {
     position: relative;
     width: 100%;
     height: 690px;
     overflow: hidden;
-    margin: 0px;
 }
 
 .slide {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     opacity: 0;
     transition: opacity 0.8s ease;
     display: none;
@@ -164,14 +157,12 @@ nav li a:hover {
 
 .slide-content h2 {
     font-size: 2.8rem;
-    margin: 0 0 10px 0;
 }
 
 .slide-content p {
     font-size: 1.4rem;
 }
 
-/* Controles del carrusel */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -220,9 +211,9 @@ nav li a:hover {
     transform: scale(1.4);
 }
 
-/* ======================
-   SECCIONES
-   ====================== */
+/* ============================================
+   SECCIONES GENERALES
+============================================ */
 .introduccion {
     padding: 50px 20px;
     max-width: 900px;
@@ -230,18 +221,11 @@ nav li a:hover {
     background-color: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    position: relative;
-    z-index: 2;
 }
 
 .introduccion h2 {
     text-align: center;
     color: var(--verde-oscuro);
-    margin-bottom: 30px;
-}
-
-.introduccion p {
-    margin-bottom: 20px;
 }
 
 .invitacion {
@@ -249,23 +233,21 @@ nav li a:hover {
     text-align: center;
     color: var(--verde-medio);
     font-style: italic;
-    margin-top: 35px;
 }
 
 .ubicacion {
-    padding: 20px 20px;
+    padding: 20px;
     background-color: var(--beige);
     text-align: center;
 }
 
 .ubicacion h3 {
     color: var(--verde-oscuro);
-    margin-bottom: 15px;
 }
 
-/* ==============
+/* ============================================
    SOBRE NOSOTROS
-   ============== */
+============================================ */
 .sobre-nosotros {
     max-width: 900px;
     margin: 40px auto;
@@ -291,7 +273,7 @@ nav li a:hover {
 
 .sn-texto p {
     margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: 1.1 rem;
     color: var(--gris-texto);
 }
 
@@ -318,6 +300,143 @@ nav li a:hover {
     background-position: center;
     background-attachment: fixed;
 }
+
+/* ============================================
+   CURSOS Y MATERIAS (AISLADO)
+============================================ */
+body.fondo-cursos main {
+    padding: 10px 60px; /* Solo aquí */
+    background-image: url("../imagenes/quimica.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    position: relative;
+    
+}
+
+body.fondo-cursos main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+
+/* Títulos SOLO en Cursos */
+body.fondo-cursos h1,
+body.fondo-cursos h2 {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+/* Panel */
+body.fondo-cursos #panel {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+}
+
+body.fondo-cursos #panel.activo {
+    max-height: 3000px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.fondo-cursos .panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+body.fondo-cursos .curso-btn {
+    padding: 12px 20px;
+    margin: 6px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+body.fondo-cursos .curso-btn:hover {
+    background: #256628;
+    transform: scale(1.03);
+}
+
+body.fondo-cursos table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body.fondo-cursos th {
+    background: #2e7d32;
+    color: white;
+    padding: 12px;
+}
+
+body.fondo-cursos td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+body.fondo-cursos tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+body.fondo-cursos tr:hover {
+    background: #e8f5e9;
+}
+
+body.fondo-cursos #contenedorBotones {
+    position: sticky;
+    top: 20px;
+    z-index: 20;
+}
+
+#stickyWrapper {
+    position: relative;
+    height: max-content; /* permite que el sticky tenga un límite */
+}
+
+#barraCursosSticky {
+    position: sticky;
+    top: 20px;
+    z-index: 20;
+}
+
+.fila-turno {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* columna fija + columna flexible */
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.col-titulo h2 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.col-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 
 /* =================
    CANCIONES PATRIAS
@@ -428,22 +547,16 @@ nav li a:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* ====================================
-   FORMULARIO DE CONTACTO E INSCRIPCIÓN
-   ==================================== */
+/* ============================================
+   FORMULARIO DE CONTACTO
+============================================ */
 .formulario-unificado {
     max-width: 800px;
     margin: 40px auto;
     padding: 30px;
-    background: rgba(255,255,255,0.85);
+    background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.formulario-unificado h2 {
-    text-align: center;
-    color: var(--verde-oscuro);
-    margin-bottom: 25px;
 }
 
 .bloque {
@@ -461,11 +574,6 @@ nav li a:hover {
     background: var(--verde-medio);
     color: white;
     cursor: pointer;
-    list-style: none;
-}
-
-.bloque summary:hover {
-    background: var(--verde-claro);
 }
 
 .bloque form {
@@ -475,90 +583,120 @@ nav li a:hover {
     gap: 15px;
 }
 
-.bloque input,
-.bloque select,
-.bloque textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
 .bloque button {
     padding: 12px;
     background: var(--verde-medio);
     color: white;
-    border: none;
     border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
 }
 
-.bloque button:hover {
-    background: var(--verde-claro);
-}
-
-/* Fondo para la página de contacto */
+/* Fondo contacto */
 .fondo-telefono {
     background-image: url("../imagenes/escritorio_telefono.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     min-height: 100%;
     position: relative;
 }
 
-/* Capa oscura encima del fondo */
 .fondo-telefono::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.45);
     z-index: 1;
 }
-/* Contenedor del formulario */
+
 .contacto {
     position: relative;
-    z-index: 2; /*para que quede arriba del overlay */
+    z-index: 2;
     max-width: 800px;
-    margin: 40px 40px auto;
-    background: rgba(255, 255, 255, 0.55);
+    margin: 40px;
     padding: 25px;
     border-radius: 10px;
     backdrop-filter: blur(4px);
 }
 
-/* ======================
+/* ============================================
    FOOTER
-   ====================== */
+============================================ */
 footer {
     background-color: var(--verde-oscuro);
     color: white;
     text-align: center;
     padding: 35px 20px 25px;
-    margin-top: 40px;
     border-top: 5px solid var(--verde-claro);
     box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.15);
 }
 
-footer p {
-    margin: 8px 0;
-    line-height: 1.5;
-}
-
-.footer-autor {
-    font-size: 0.95rem;
-    opacity: 0.85;
-}
-
 .footer-autor strong {
     color: var(--verde-claro);
-    font-weight: 600;
 }
 
-.footer-autor strong:hover {
-    color: white;
-    text-decoration: underline;
+/* ============================================
+   RESPONSIVE GENERAL
+============================================ */
+@media (max-width: 800px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sobre-nosotros,
+    .introduccion {
+        padding: 30px 20px;
+    }
+
+    .sn-iconos {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .info-escuela {
+        padding-left: 0;
+    }
+
+    .carousel {
+        height: 450px;
+    }
+
+    .slide-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE SOLO PARA CURSOS
+============================================ */
+@media (max-width: 800px) {
+    body.fondo-cursos main {
+        padding: 20px;
+    }
+
+    body.fondo-cursos .panel-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    body.fondo-cursos main {
+        padding: 12px;
+    }
 }
