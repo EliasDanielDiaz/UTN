@@ -68,3 +68,17 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(0);
     startAutoplay();
 });
+
+const paneles = document.querySelectorAll(".panel");
+
+paneles.forEach(panel => {
+    const boton = panel.querySelector(".toggle");
+
+    boton.addEventListener("click", () => {
+        paneles.forEach(p => {
+            if (p !== panel) p.classList.remove("abierto");
+        });
+
+        panel.classList.toggle("abierto");
+    });
+});

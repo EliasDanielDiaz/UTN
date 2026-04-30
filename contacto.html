@@ -29,65 +29,70 @@
     </nav>
   </header>
 
-  <main>
-    <div class="overlay-area">
-      <div class="contacto">
-        <section class="formulario-unificado">
-          <h2>Contacto e Inscripción</h2>
+<main class="contacto-main">
+  <div class="contacto-contenedor">
 
-          <!-- Bloque de Inscripción -->
-          <details class="bloque" aria-label="Solicitud de inscripción">
-            <summary>Solicitud de Inscripción</summary>
+    <h2>Inscripción y Contacto</h2>
 
-            <form class="form-inscripcion">
-              <label>Nombre y Apellido:</label>
-              <input type="text" name="nombre" required>
+    <!-- PANEL 1: INSCRIPCIÓN -->
+    <section id="panel-inscripcion" class="panel">
+      <button class="toggle">Solicitud de Inscripción</button>
 
-              <label>DNI:</label>
-              <input type="number" name="nombre" required>
+      <div class="panel-contenido">
+        <form class="form-inscripcion">
 
-              <label>Curso al que desea inscribirse:</label>
-              <select required>
-                <option value="">Seleccione una opción</option>
-                <option>1° Año</option>
-                <option>2° Año</option>
-                <option>3° Año</option>
-                <option>4° Año</option>
-                <option>5° Año</option>
-                <option>6° Año</option>
-              </select>
+          <label>Nombre y Apellido:</label>
+          <input type="text" name="nombre" required>
 
-              <label>Correo electrónico:</label>
-              <input type="email" name="email" required>
+          <label>DNI:</label>
+          <input type="number" name="dni" required>
 
-              <label>Teléfono:</label>
-              <input type="tel" name="tel">
+          <label>Curso al que desea inscribirse:</label>
+          <select required>
+            <option value="">Seleccione una opción</option>
+            <option>1° Año</option>
+            <option>2° Año</option>
+            <option>3° Año</option>
+            <option>4° Año</option>
+            <option>5° Año</option>
+            <option>6° Año</option>
+          </select>
 
-              <button type="submit">Enviar Solicitud</button>
-            </form>
-          </details>
+          <label>Correo electrónico:</label>
+          <input type="email" name="email" required>
 
-          <!-- Bloque de Contacto -->
-          <details class="bloque" aria-label="Formulario de contacto">
-            <summary>Contacto</summary>
+          <label>Teléfono:</label>
+          <input type="tel" name="tel">
 
-            <form class="form-contacto">
-              <label>Nombre:</label>
-              <input type="text" name="name" required>
-
-              <label>Correo electrónico:</label>
-              <input type="email" name="email" required>
-
-              <label>Mensaje o comentario:</label>
-              <textarea rows="5" required></textarea>
-
-              <button type="submit">Enviar mensaje</button>
-            </form>
-          </details>
-        </section>
+          <button type="submit">Enviar Solicitud</button>
+        </form>
       </div>
-    </div>
-  </main>
+    </section>
+
+    <!-- PANEL 2: CONTACTO -->
+    <section id="panel-contacto" class="panel">
+      <button class="toggle">Contacto</button>
+
+      <div class="panel-contenido">
+        <form class="form-contacto">
+
+          <label>Nombre:</label>
+          <input type="text" name="name" required>
+
+          <label>Correo electrónico:</label>
+          <input type="email" name="email" required>
+
+          <label>Mensaje o comentario:</label>
+          <textarea rows="5" required></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</main>
+
  
   <footer>
     <p>© 2026 E.E.S. N° 59 - Todos los derechos reservados.</p>
