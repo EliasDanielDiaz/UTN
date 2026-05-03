@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoplay();
 });
 
+// Paneles Contacto
 const paneles = document.querySelectorAll(".panel");
 
 paneles.forEach(panel => {
