@@ -369,11 +369,11 @@ const cursos = {
       ["17:20 a 18:20", "Matemática", "Matemática", "Filosofía e Historia de la Ciencia y Tecnología", "Biología, Genética y Sociedad", "Educación Física"],
     ]
   },
-
+  
 }; // ← cierre del objeto "cursos"
 
 /* ============================
-       FUNCIÓN PARA MOSTRAR CURSO
+    FUNCIÓN PARA MOSTRAR CURSO
    ============================ */
 let cursoActivo = null;
 

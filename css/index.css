@@ -1,5 +1,5 @@
 /* ============================================
-   PALETA DE COLORES
+    PALETA DE COLORES
 ============================================ */
 :root {
     --verde-oscuro: #1e3a2f;
@@ -10,7 +10,7 @@
 }
 
 /* ============================================
-   ESTILO GENERAL
+    ESTILO GENERAL
 ============================================ */
 html, body {
     height: 100%;
@@ -37,7 +37,7 @@ main {
 }
 
 /* ============================================
-   HEADER
+    HEADER
 ============================================ */
 header {
     display: flex;
@@ -47,7 +47,7 @@ header {
     background-image: url('https://img.freepik.com/fotos-premium/fondo-verde-abstracto-lineas-onduladas_701806-1954.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-bottom: 5px solid var(--verde-claro);
@@ -70,6 +70,7 @@ header > * {
 .logo {
     width: 170px;
     height: 170px;
+    background: transparent;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
@@ -87,7 +88,7 @@ header > * {
 }
 
 /* ============================================
-   MENÚ
+    MENÚ
 ============================================ */
 nav ul {
     list-style: none;
@@ -118,7 +119,7 @@ nav li a:hover {
 }
 
 /* ============================================
-   CARRUSEL HERO
+    CARRUSEL HERO
 ============================================ */
 .carousel {
     position: relative;
@@ -212,7 +213,7 @@ nav li a:hover {
 }
 
 /* ============================================
-   SECCIONES GENERALES
+    SECCIONES GENERALES
 ============================================ */
 .introduccion {
     padding: 50px 20px;
@@ -246,7 +247,7 @@ nav li a:hover {
 }
 
 /* ============================================
-   SOBRE NOSOTROS
+    SOBRE NOSOTROS
 ============================================ */
 .sobre-nosotros {
     max-width: 900px;
@@ -302,7 +303,7 @@ nav li a:hover {
 }
 
 /* ============================================
-   CURSOS Y MATERIAS (AISLADO)
+    CURSOS Y MATERIAS (AISLADO)
 ============================================ */
 body.fondo-cursos main {
     padding: 10px 60px; /* Solo aquí */
@@ -439,7 +440,7 @@ body.fondo-cursos #contenedorBotones {
 
 
 /* =================
-   CANCIONES PATRIAS
+    CANCIONES PATRIAS
    ================= */
 .canciones h3 {
     text-align: center;
@@ -456,7 +457,7 @@ body.fondo-cursos #contenedorBotones {
 }
 
 /* ===========================
-   CINTAS ESCOLTANDO EL TITULO
+    CINTAS ESCOLTANDO EL TITULO
    =========================== */
 .canciones h3 {
     position: relative;
@@ -502,7 +503,7 @@ body.fondo-cursos #contenedorBotones {
 }
 
 /* ======================
-   TABLA DE CANCIONES
+    TABLA DE CANCIONES
    ====================== */
 .tabla-canciones::before {
     content: "";
@@ -646,7 +647,7 @@ body.fondo-telefono {
 }
 
 /* ============================================
-   FOOTER
+    FOOTER
 ============================================ */
 footer {
     background-color: var(--verde-oscuro);
@@ -662,7 +663,7 @@ footer {
 }
 
 /* ============================================
-   RESPONSIVE GENERAL
+    RESPONSIVE GENERAL
 ============================================ */
 @media (max-width: 800px) {
     nav ul {
