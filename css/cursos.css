@@ -1,0 +1,137 @@
+/* ============================================
+    CURSOS Y MATERIAS (AISLADO)
+============================================ */
+body.fondo-cursos main {
+    padding: 10px 60px; /* Solo aquí */
+    background-image: url("../imagenes/quimica.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    position: relative;
+    
+}
+
+body.fondo-cursos main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+
+/* Títulos SOLO en Cursos */
+body.fondo-cursos h1,
+body.fondo-cursos h2 {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+/* Panel */
+body.fondo-cursos #panel {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+}
+
+body.fondo-cursos #panel.activo {
+    max-height: 3000px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.fondo-cursos .panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+body.fondo-cursos .curso-btn {
+    padding: 12px 20px;
+    margin: 6px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+body.fondo-cursos .curso-btn:hover {
+    background: #256628;
+    transform: scale(1.03);
+}
+
+body.fondo-cursos table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body.fondo-cursos th {
+    background: #2e7d32;
+    color: white;
+    padding: 12px;
+}
+
+body.fondo-cursos td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+body.fondo-cursos tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+body.fondo-cursos tr:hover {
+    background: #e8f5e9;
+}
+
+body.fondo-cursos #contenedorBotones {
+    position: sticky;
+    top: 20px;
+    z-index: 20;
+}
+
+#stickyWrapper {
+    position: relative;
+    height: max-content; /* permite que el sticky tenga un límite */
+}
+
+#barraCursosSticky {
+    position: sticky;
+    top: 20px;
+    z-index: 20;
+}
+
+.fila-turno {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* columna fija + columna flexible */
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.col-titulo h2 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

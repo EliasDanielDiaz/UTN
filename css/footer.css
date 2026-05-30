@@ -1,0 +1,16 @@
+/* ============================================
+    FOOTER
+============================================ */
+footer {
+    position: relative;
+    background-color: var(--verde-oscuro);
+    color: white;
+    text-align: center;
+    padding: 35px 20px 25px;
+    border-top: 5px solid var(--verde-claro);
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.footer-autor strong {
+    color: var(--verde-claro);
+}

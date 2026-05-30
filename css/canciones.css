@@ -1,0 +1,101 @@
+/* =================
+    CANCIONES PATRIAS
+   ================= */
+.titulo-canciones {
+    background-color: white;
+    padding: 0;
+    border-radius: 8px;
+}
+
+/* ===========================
+    CINTAS ESCOLTANDO EL TITULO
+   =========================== */
+.canciones h3 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 25px 0;
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+/* Cinta izquierda */
+.canciones h3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 275px;   /* largo de la cinta */
+    height: 60px;   /* alto de la cinta */
+    background-image: url("../imagenes/cinta_izquierda.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    transform: translateY(-50%);
+    opacity: 0.9;
+}
+
+/* Cinta derecha */
+.canciones h3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 275px;
+    height: 60px;
+    background-image: url("../imagenes/cinta_derecha.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    transform: translateY(-50%);
+    opacity: 0.9;
+}
+
+/* ======================
+    TABLA DE CANCIONES
+   ====================== */
+.tabla-canciones::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../imagenes/malvinas.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.tabla-canciones {
+    position: relative;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.tabla-canciones p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tabla-canciones iframe {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.tabla-canciones td {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+}
+
+.tabla-canciones td:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,37 @@
+/* ============================================
+    PALETA DE COLORES
+============================================ */
+:root {
+    --verde-oscuro: #1e3a2f;
+    --verde-medio: #2e6b4f;
+    --verde-claro: #4a9b7b;
+    --beige: #f5f0e6;
+    --gris-texto: #333;
+}
+
+/* ============================================
+    ESTILO GENERAL
+============================================ */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gris-texto);
+    background-color: var(--beige);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+    max-width: 100%;
+    margin: 0;
+}

@@ -1,0 +1,81 @@
+/* ============================================
+    HEADER
+============================================ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-image: url('https://img.freepik.com/fotos-premium/fondo-verde-abstracto-lineas-onduladas_701806-1954.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid var(--verde-claro);
+    z-index: 100;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(30, 58, 47, 0.78);
+    z-index: 1;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 170px;
+    height: 170px;
+    background: transparent;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.info-escuela {
+    flex-grow: 1;
+    padding-left: 25px;
+}
+
+.info-escuela h1,
+.info-escuela h2,
+.info-escuela h3 {
+    color: white;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+    margin: 5px 0;
+}
+
+/* ============================================
+    MENÚ
+============================================ */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+nav li a:hover {
+    background-color: var(--verde-claro);
+    border-color: var(--verde-claro);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}

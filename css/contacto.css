@@ -1,0 +1,100 @@
+/* ============================================
+    CONTACTO
+============================================ */
+/* Fondo general */
+body.fondo-telefono {
+    background-image: url("../imagenes/escritorio_telefono.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* MAIN + OVERLAY */
+.contacto-main {
+    position: relative;
+    padding: 40px 0;
+}
+
+.contacto-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+/* Contenido por encima del overlay */
+.contacto-contenedor {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: auto;
+    color: white;
+}
+
+/* PANEL */
+.panel {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Botón del panel */
+.panel .toggle {
+    width: 100%;
+    padding: 15px;
+    background: var(--verde-medio);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Contenido colapsable */
+.panel-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    padding: 0 20px;
+}
+
+/* Cuando el panel está abierto */
+.panel.abierto .panel-contenido {
+    max-height: 1000px;
+    padding: 20px;
+}
+
+/* Formularios */
+.form-inscripcion,
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-inscripcion input,
+.form-inscripcion select,
+.form-contacto input,
+.form-contacto textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+.form-inscripcion button,
+.form-contacto button {
+    padding: 12px;
+    background: var(--verde-medio);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
