@@ -1,0 +1,57 @@
+.proceres-main {
+  background: radial-gradient(circle at center, #e8f4ff 0%, #cde0f7 100%);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.titulo-proceres {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #003366;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.proceres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.procer {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.procer img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.procer h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #003366;
+}
+
+/* Efecto hover tipo figurita brillante */
+.procer:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .titulo-proceres {
+    font-size: 1.6rem;
+  }
+  .proceres-grid {
+    gap: 16px;
+  }
+}
