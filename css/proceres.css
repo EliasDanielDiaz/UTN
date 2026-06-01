@@ -55,3 +55,56 @@
     gap: 16px;
   }
 }
+
+/* PANEL FLOTANTE */
+.panel-flotante {
+  position: fixed;
+  top: 0;
+  right: -100%; /* oculto */
+  width: 60%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.25);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s ease;
+  z-index: 9999;
+}
+
+.panel-flotante.activo {
+  right: 0; /* aparece */
+}
+
+.panel-contenido {
+  display: flex;
+  gap: 20px;
+}
+
+.panel-izquierda {
+  width: 40%;
+}
+
+.panel-izquierda img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.panel-derecha {
+  width: 60%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.panel-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}

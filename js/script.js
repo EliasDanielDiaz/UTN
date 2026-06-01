@@ -83,3 +83,38 @@ paneles.forEach(panel => {
         panel.classList.toggle("abierto");
     });
 });
+
+// panel flotante de proceres
+const panel = document.getElementById("panel");
+const cerrarPanel = document.getElementById("cerrarPanel");
+
+const infoProceres = {
+  saavedra: {
+    nombre: "Cornelio Saavedra",
+    img: "imagenes/01CornelioSaavedra.jpg",
+    resena: "Cornelio Saavedra fue presidente de la Primera Junta en 1810..."
+  },
+  paso: {
+    nombre: "Juan José Paso",
+    img: "imagenes/02JuanJosePaso.jpg",
+    resena: "Juan José Paso fue un político clave en la Revolución de Mayo..."
+  }
+  // Agregás los demás próceres acá
+};
+
+document.querySelectorAll(".btn-info").forEach(btn => {
+  btn.addEventListener("click", e => {
+    const procer = e.target.parentElement.dataset.procer;
+    const data = infoProceres[procer];
+
+    document.getElementById("panel-img").src = data.img;
+    document.getElementById("panel-nombre").textContent = data.nombre;
+    document.getElementById("panel-resena").textContent = data.resena;
+
+    panel.classList.add("activo");
+  });
+});
+
+cerrarPanel.addEventListener("click", () => {
+  panel.classList.remove("activo");
+});
