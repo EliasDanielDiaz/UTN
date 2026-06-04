@@ -74,16 +74,6 @@
   color: translateY(-3px);
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .titulo-proceres {
-    font-size: 1.6rem;
-  }
-  .proceres-grid {
-    gap: 16px;
-  }
-}
-
 /* PANEL FLOTANTE */
 .panel-flotante {
   position: fixed;

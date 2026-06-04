@@ -177,10 +177,10 @@ const infoProceres = {
   },
 
   azurduy: {
-    nombre: "Juana de Azurduy",
-    img: "imagenes/11JuanaDeAzurduy.jpg",
+    nombre: "Juana Azurduy Llanos de Padilla",
+    img: "imagenes/11JuanaAzurduyLlanosDePadilla.jpg",
     resena: `
-<p><b>Juana Azurduy (1780–1862)</b></p>
+<p><b>Juana Azurduy Llanos de Padilla(1780–1862)</b></p>
 
 <p>Juana Azurduy fue una <b>militar y heroína de la independencia sudamericana</b>, reconocida por su valentía y liderazgo en las luchas contra las fuerzas realistas. Su compromiso con la libertad la convirtió en un símbolo de coraje y resistencia.</p>
 
