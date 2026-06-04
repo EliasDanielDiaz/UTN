@@ -125,3 +125,102 @@
 .ubicacion h3 {
     color: var(--verde-oscuro);
 }
+
+/* ==========================
+    RESPONSIVE
+========================== */
+@media (max-width: 1024px) {
+    .carousel {
+        height: 550px;
+    }
+
+    .slide-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .slide-content p {
+        font-size: 1.2rem;
+    }
+
+    .introduccion {
+        padding: 35px 20px;
+        margin: 30px auto;
+    }
+
+    .ubicacion iframe {
+        height: 320px;
+    }
+}
+
+@media (max-width: 800px) {
+    .carousel {
+        height: 480px;
+    }
+
+    .slide-content {
+        left: 5%;
+        bottom: 12%;
+        padding-right: 20px;
+    }
+
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .introduccion {
+        padding: 25px 15px;
+        margin: 25px auto;
+    }
+
+    .introduccion h2 {
+        font-size: 1.8rem;
+    }
+
+    .introduccion p {
+        font-size: 1rem;
+    }
+
+    .ubicacion iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .slide-content {
+        left: 5%;
+        bottom: 10%;
+    }
+
+    .slide-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .slide-content p {
+        font-size: 0.95rem;
+    }
+
+    .introduccion {
+        padding: 15px 10px;
+        margin: 20px auto;
+    }
+
+    .introduccion h2 {
+        font-size: 1.5rem;
+    }
+
+    .introduccion p {
+        font-size: 0.95rem;
+    }
+
+    .ubicacion iframe {
+        height: 250px;
+    }
+}

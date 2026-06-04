@@ -127,3 +127,48 @@
   font-size: 1rem;
 }
 
+/* =====================================
+    RESPONSIVE
+======================================== */
+@media (max-width: 1024px) {
+  body.fondo-proceres .proceres-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  body.fondo-proceres #panel {
+    width: 80%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 800px) {
+  body.fondo-proceres .proceres-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  body.fondo-proceres #panel {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  body.fondo-proceres .proceres-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  body.fondo-proceres #panel {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  body.fondo-proceres #panel img {
+    width: 120px;
+  }
+
+  body.fondo-proceres #panel-resena {
+    font-size: 0.9rem;
+  }
+}

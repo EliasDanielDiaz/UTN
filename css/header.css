@@ -79,3 +79,34 @@ nav li a:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* ==========================
+    RESPONSIVE
+============================= */
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .info-escuela {
+        padding-left: 0;
+    }
+}

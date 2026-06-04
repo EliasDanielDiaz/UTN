@@ -14,3 +14,18 @@ footer {
 .footer-autor strong {
     color: var(--verde-claro);
 }
+
+/* ==========================
+    RESPONSIVE
+========================== */
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 800px) {
+    
+}
+
+@media (max-width: 500px) {
+    
+}

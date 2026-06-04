@@ -1,101 +1,128 @@
-/* =================
-    CANCIONES PATRIAS
-   ================= */
+.canciones {
+  position: relative;
+  padding: 40px 20px;
+  background-image: url("../imagenes/bandera_malvinas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.canciones::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* oscurece un poco para que se lea bien */
+  z-index: 0;
+}
+
 .titulo-canciones {
-    background-color: white;
-    padding: 0;
-    border-radius: 8px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25); /* efecto card translúcida */
+  backdrop-filter: blur(4px);            /* glassmorphism */
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 5;
 }
 
-/* ===========================
-    CINTAS ESCOLTANDO EL TITULO
-   =========================== */
-.canciones h3 {
-    position: relative;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0;
-    padding: 25px 0;
-    background-color: white;
-    margin-bottom: 25px;
+.titulo-canciones h3 {
+  margin: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--verde-oscuro);
+  font-size: 2rem;
 }
 
-/* Cinta izquierda */
-.canciones h3::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 275px;   /* largo de la cinta */
-    height: 60px;   /* alto de la cinta */
-    background-image: url("../imagenes/cinta_izquierda.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-    transform: translateY(-50%);
-    opacity: 0.9;
+.canciones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding-top: 10px;
+  position: relative;
+  z-index: 2; /* las tarjetas quedan arriba del overlay */
 }
 
-/* Cinta derecha */
-.canciones h3::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 275px;
-    height: 60px;
-    background-image: url("../imagenes/cinta_derecha.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-    transform: translateY(-50%);
-    opacity: 0.9;
+.cancion-item {
+  background: rgba(255,255,255,0.4);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
 }
 
-/* ======================
-    TABLA DE CANCIONES
-   ====================== */
-.tabla-canciones::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("../imagenes/malvinas.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-    z-index: -1;
+.cancion-item h3 {
+  margin-bottom: 8px;
+  color: var(--verde-oscuro);
 }
 
-.tabla-canciones {
-    position: relative;
-    padding: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 20px;
-    text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+.cancion-item p {
+  margin-bottom: 0px;
+  color: var(--gris-texto);
 }
 
-.tabla-canciones p {
-    font-weight: 600;
-    margin-bottom: 10px;
+.cancion-item iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
 }
 
-.tabla-canciones iframe {
-    width: 100%;
-    border-radius: 12px;
+@media (max-width: 1024px) {
+  .cancion-item iframe {
+    height: 250px;
+  }
 }
 
-.tabla-canciones td {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px;
+@media (max-width: 800px) {
+  .canciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cancion-item {
+  background: rgba(255,255,255,0.3);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px; /* podés ajustar */
+}
+  .cancion-item iframe {
+    height: 250px;
+  }
 }
 
-.tabla-canciones td:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+@media (max-width: 500px) {
+  .canciones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cancion-item iframe {
+    height: 180px;
+    min-height: 380px;
+  }
+
+  .cancion-item {
+    padding: 12px;
+  }
+
+  .cancion-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .cancion-item p {
+    font-size: 0.95rem;
+  }
 }

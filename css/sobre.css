@@ -2,54 +2,122 @@
     SOBRE NOSOTROS
 ============================================ */
 .sobre-nosotros {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px 30px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .sobre-nosotros h2 {
-    text-align: center;
-    color: var(--verde-oscuro);
-    margin-bottom: 30px;
-    font-size: 2.2rem;
-    letter-spacing: 1px;
+  text-align: center;
+  color: var(--verde-oscuro);
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
 }
 
 .sn-contenedor {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
 .sn-texto p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: var(--gris-texto);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--gris-texto);
 }
 
 .sn-iconos {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .sn-item {
-    font-size: 2.4rem;
-    color: var(--verde-medio);
+  font-size: 2.4rem;
+  color: var(--verde-medio);
 }
 
 .sn-item p {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: var(--gris-texto);
+  margin-top: 8px;
+  font-size: 1rem;
+  color: var(--gris-texto);
 }
 
 .fondo-adn {
-    background-image: url("../imagenes/fondo-adn.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  background-image: url("../imagenes/fondo-adn.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ==========================
+    RESPONSIVE
+========================== */
+@media (max-width: 1024px) {
+  .sobre-nosotros {
+    padding: 35px 25px;
+  }
+
+  .sn-contenedor {
+    gap: 30px;
+  }
+
+  .sn-texto p {
+    font-size: 1.05rem;
+  }
+
+  .sn-item p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .sobre-nosotros {
+    padding: 30px 20px;
+  }
+
+  .sn-contenedor {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .sn-iconos {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .sn-item {
+    font-size: 2rem;
+  }
+
+  .sn-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .sobre-nosotros h2 {
+    font-size: 1.8rem;
+  }
+
+  .sn-texto p {
+    font-size: 0.95rem;
+  }
+
+  .sn-item {
+    font-size: 1.8rem;
+  }
+
+  .sn-item p {
+    font-size: 0.9rem;
+  }
+
+  .sn-contenedor {
+    gap: 30px;
+  }
 }
