@@ -50,21 +50,21 @@
           <button class="toggle">Solicitud de Inscripción</button>
 
           <div class="panel-contenido">
-            <form class="form-inscripcion">
+            <form class="form-inscripcion" method="post">
               <!-- COLUMNA 1: ESTUDIANTE -->
               <div class="columna-estudiante">
                 <h3>Datos del Estudiante</h3>
 
-                <label for="nombre"
+                <label for="nombre-estudiante"
                   >Apellidos y Nombres: (Completos según el DNI)</label
                 >
-                <input type="text" id="nombre" name="nombre" required />
+                <input type="text" id="nombre-estudiante" name="nombre-estudiante" autocomplete="name" required />
 
-                <label for="dni">DNI:</label>
+                <label for="dni-estudiante">DNI:</label>
                 <input
                   type="text"
-                  id="dni"
-                  name="dni"
+                  id="dni-estudiante"
+                  name="dni-estudiante"
                   placeholder="XX.XXX.XXX"
                   required
                 />
@@ -77,7 +77,7 @@
                   required
                 />
 
-                <label for="domicilio">Domicilio:</label>
+                <label for="calle">Domicilio:</label>
                 <div class="domicilio-grupo">
                   <input
                     type="text"
@@ -87,7 +87,7 @@
                     required
                   />
                   <input
-                    type="number"
+                    type="text"
                     id="numero"
                     name="numero"
                     placeholder="Número"
@@ -105,6 +105,7 @@
                       id="turno-manana"
                       name="turno"
                       value="mañana"
+                      required
                     />
                     Mañana
                   </label>
@@ -137,23 +138,23 @@
               <div class="columna-adulto">
                 <h3>Datos del Adulto Responsable</h3>
 
-                <label for="nombre">Apellidos y Nombres:</label>
-                <input type="text" id="nombre" name="nombre" required />
+                <label for="nombre-adulto">Apellidos y Nombres:</label>
+                <input type="text" id="nombre-adulto" name="nombre-adulto" autocomplete="name" required />
 
-                <label for="dni">DNI:</label>
+                <label for="dni-adulto">DNI:</label>
                 <input
                   type="text"
-                  id="dni"
-                  name="dni"
+                  id="dni-adulto"
+                  name="dni-adulto"
                   placeholder="XX.XXX.XXX"
                   required
                 />
 
-                <label for="tel">Teléfono:</label>
-                <input type="tel" id="tel" name="tel" required />
+                <label for="tel-adulto">Teléfono:</label>
+                <input type="tel" id="tel-adulto" name="tel-adulto" autocomplete="tel" required />
 
-                <label for="email-insc">Correo electrónico:</label>
-                <input type="email" id="email-insc" name="email" required />
+                <label for="email-adulto">Correo electrónico:</label>
+                <input type="email" id="email-adulto" name="email-adulto" autocomplete="email" required />
 
                 <label for="actividad-laboral">Actividad Laboral:</label>
                 <input
@@ -178,15 +179,15 @@
           <button class="toggle">Contacto</button>
 
           <div class="panel-contenido">
-            <form class="form-contacto">
-              <label>Apellido y Nombre:</label>
-              <input type="text" name="name" required />
+            <form class="form-contacto" method="post">
+              <label for="nombre-contacto">Apellido y Nombre:</label>
+              <input type="text" id="nombre-contacto" name="nombre-contacto" autocomplete="name" required />
 
-              <label for="tel">Teléfono:</label>
-              <input type="tel" id="tel" name="tel" required />
+              <label for="tel-contacto">Teléfono:</label>
+              <input type="tel" id="tel-contacto" name="tel-contacto" autocomplete="tel" required />
 
-              <label>Mensaje o comentario:</label>
-              <textarea rows="5" required></textarea>
+              <label for="mensaje">Mensaje o comentario:</label>
+              <textarea rows="5" id="mensaje" name="mensaje" placeholder="Deje aquí su mensaje." required></textarea>
 
               <div class="botones-form">
                 <button type="submit">Enviar Comentario</button>
