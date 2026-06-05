@@ -14,6 +14,7 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-bottom: 5px solid var(--verde-claro);
     z-index: 100;
+    min-width: 0;
 }
 
 header::before {
@@ -29,6 +30,10 @@ header > * {
     z-index: 2;
 }
 
+nav {
+    flex-shrink: 1;
+}
+
 .logo {
     width: 170px;
     height: 170px;
@@ -38,7 +43,14 @@ header > * {
 
 .info-escuela {
     flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
     padding-left: 25px;
+}
+
+.info-escuela,
+nav {
+    min-width: 0;
 }
 
 .info-escuela h1,
@@ -53,6 +65,8 @@ header > * {
     MENÚ
 ============================================ */
 nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     display: flex;
     gap: 12px;
@@ -81,32 +95,126 @@ nav li a:hover {
 }
 
 /* ==========================
+    BOTÓN HAMBURGUESA
+============================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* ANIMACIÓN */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ==========================
     RESPONSIVE
 ============================= */
 @media (max-width: 1024px) {
-    
+  header .info-escuela h1 {
+    font-size: 1.8rem;
+  }
+
+  header .info-escuela h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 800px) {
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@media (max-width: 980px) {
+
+  /* Mostrar hamburguesa */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Ocultar menú horizontal y convertirlo en panel lateral*/
+  nav ul {
+    position: absolute;
+    top: 90px;
+    right: -230;
+    width: 230px;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+
+  nav ul.open {
+    right: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  /* Ajustes del header */
+  header {
+    justify-content: space-between;
+  }
+
+  .info-escuela h1 {
+    font-size: 1.6rem;
+  }
+
+  .info-escuela h2 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 500px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
 
-    .logo {
-        width: 130px;
-        height: 130px;
-    }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
 
-    .info-escuela {
-        padding-left: 0;
-    }
+  .info-escuela h1 {
+    font-size: 1.4rem;
+  }
+
+  .info-escuela h2 {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    width: 200px;
+    padding: 15px;
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+  }
 }

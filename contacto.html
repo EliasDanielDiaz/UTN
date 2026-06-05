@@ -27,6 +27,12 @@
         <h2>Modalidad: Ciencias Naturales</h2>
       </div>
 
+      <button class="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav aria-label="Menú principal de navegación">
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -56,7 +62,13 @@
                 <label for="nombre-estudiante"
                   >Apellidos y Nombres: (Completos según el DNI)</label
                 >
-                <input type="text" id="nombre-estudiante" name="nombre-estudiante" autocomplete="name" required />
+                <input
+                  type="text"
+                  id="nombre-estudiante"
+                  name="nombre-estudiante"
+                  autocomplete="name"
+                  required
+                />
 
                 <label for="dni-estudiante">DNI:</label>
                 <input
@@ -129,7 +141,6 @@
                   <option>5° Año</option>
                   <option>6° Año</option>
                 </select>
-              
               </div>
 
               <!-- COLUMNA 2: ADULTO RESPONSABLE -->
@@ -137,7 +148,13 @@
                 <h3>Datos del Adulto Responsable</h3>
 
                 <label for="nombre-adulto">Apellidos y Nombres:</label>
-                <input type="text" id="nombre-adulto" name="nombre-adulto" autocomplete="name" required />
+                <input
+                  type="text"
+                  id="nombre-adulto"
+                  name="nombre-adulto"
+                  autocomplete="name"
+                  required
+                />
 
                 <label for="dni-adulto">DNI:</label>
                 <input
@@ -149,10 +166,22 @@
                 />
 
                 <label for="tel-adulto">Teléfono:</label>
-                <input type="tel" id="tel-adulto" name="tel-adulto" autocomplete="tel" required />
+                <input
+                  type="tel"
+                  id="tel-adulto"
+                  name="tel-adulto"
+                  autocomplete="tel"
+                  required
+                />
 
                 <label for="email-adulto">Correo electrónico:</label>
-                <input type="email" id="email-adulto" name="email-adulto" autocomplete="email" required />
+                <input
+                  type="email"
+                  id="email-adulto"
+                  name="email-adulto"
+                  autocomplete="email"
+                  required
+                />
 
                 <label for="actividad-laboral">Actividad Laboral:</label>
                 <input
@@ -179,13 +208,31 @@
           <div class="panel-contenido">
             <form class="form-contacto" method="post">
               <label for="nombre-contacto">Apellido y Nombre:</label>
-              <input type="text" id="nombre-contacto" name="nombre-contacto" autocomplete="name" required />
+              <input
+                type="text"
+                id="nombre-contacto"
+                name="nombre-contacto"
+                autocomplete="name"
+                required
+              />
 
               <label for="tel-contacto">Teléfono:</label>
-              <input type="tel" id="tel-contacto" name="tel-contacto" autocomplete="tel" required />
+              <input
+                type="tel"
+                id="tel-contacto"
+                name="tel-contacto"
+                autocomplete="tel"
+                required
+              />
 
               <label for="mensaje">Mensaje o comentario:</label>
-              <textarea rows="5" id="mensaje" name="mensaje" placeholder="Deje aquí su mensaje." required></textarea>
+              <textarea
+                rows="5"
+                id="mensaje"
+                name="mensaje"
+                placeholder="Deje aquí su mensaje."
+                required
+              ></textarea>
 
               <div class="botones-form">
                 <button type="submit">Enviar Comentario</button>
@@ -205,5 +252,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/header.js"></script>
+    
   </body>
 </html>
