@@ -2,96 +2,91 @@
     HEADER
 ============================================ */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    background-image: url('https://img.freepik.com/fotos-premium/fondo-verde-abstracto-lineas-onduladas_701806-1954.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border-bottom: 5px solid var(--verde-claro);
-    z-index: 100;
-    min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-verde-abstracto-lineas-onduladas_701806-1954.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 5px solid var(--verde-claro);
+  z-index: 100;
+  min-width: 0;
 }
 
 header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: rgba(30, 58, 47, 0.78);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(30, 58, 47, 0.78);
+  z-index: 1;
 }
 
 header > * {
-    position: relative;
-    z-index: 2;
-}
-
-nav {
-    flex-shrink: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
-    width: 170px;
-    height: 170px;
-    background: transparent;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  width: 170px;
+  height: 170px;
+  background: transparent;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 .info-escuela {
-    flex-grow: 1;
-    flex-shrink: 1;
-    min-width: 0;
-    padding-left: 25px;
-}
-
-.info-escuela,
-nav {
-    min-width: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+  padding-left: 25px;
 }
 
 .info-escuela h1,
 .info-escuela h2,
 .info-escuela h3 {
-    color: white;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
-    margin: 5px 0;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  margin: 5px 0;
 }
 
 /* ============================================
-    MENÚ
+MENÚ
 ============================================ */
+nav {
+  flex-shrink: 1;
+  min-width: 0;
+}
 nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    display: flex;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 nav li a {
-    display: inline-block;
-    padding: 12px 22px;
-    background-color: rgba(255, 255, 255, 0.25);
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 nav li a:hover {
-    background-color: var(--verde-claro);
-    border-color: var(--verde-claro);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--verde-claro);
+  border-color: var(--verde-claro);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================
@@ -132,6 +127,11 @@ nav li a:hover {
     RESPONSIVE
 ============================= */
 @media (max-width: 1024px) {
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+
   header .info-escuela h1 {
     font-size: 1.8rem;
   }
@@ -141,11 +141,28 @@ nav li a:hover {
   }
 
   nav ul li a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 950px) {
+  /* Ajustes del header */
+  header {
+    justify-content: space-between;
+  }
+
+  header .info-escuela h1 {
+    font-size: 1.7rem;
+  }
+
+  header .info-escuela h2 {
+    font-size: 1.1rem;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
 
   /* Mostrar hamburguesa */
   .hamburger {
@@ -158,7 +175,7 @@ nav li a:hover {
     top: 90px;
     right: 0;
     width: 230px;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(4px);
     padding: 20px;
     border-radius: 0 0 0 12px;
@@ -178,34 +195,22 @@ nav li a:hover {
   nav ul li {
     margin: 0;
   }
-
-  /* Ajustes del header */
-  header {
-    justify-content: space-between;
-  }
-
-  .info-escuela h1 {
-    font-size: 1.6rem;
-  }
-
-  .info-escuela h2 {
-    font-size: 1rem;
-  }
 }
 
-@media (max-width: 500px) {
-
+@media (max-width: 550px) {
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
   }
 
-  .info-escuela h1 {
-    font-size: 1.4rem;
+  header .info-escuela h1 {
+    font-size: 1.6rem;
+    min-width: 0;
   }
 
-  .info-escuela h2 {
-    font-size: 0.9rem;
+  header .info-escuela h2 {
+    font-size: 1rem;
+    min-width: 0;
   }
 
   nav ul {
@@ -214,6 +219,6 @@ nav li a:hover {
   }
 
   nav ul li a {
-    font-size: 0.95rem;
+    font-size: 0.6rem;
   }
 }
