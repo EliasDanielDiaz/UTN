@@ -1,3 +1,6 @@
+/* ============================
+    BASE DE DATOS DE CURSOS
+============================ */
 const cursos = {
 
   "AFTE": {
@@ -373,10 +376,13 @@ const cursos = {
 }; // ← cierre del objeto "cursos"
 
 /* ============================
-    FUNCIÓN PARA MOSTRAR CURSO
-   ============================ */
+    VARIABLES Y ESTADO
+============================ */
 let cursoActivo = null;
 
+/* ============================
+    AJUSTAR ESPACIADOR
+============================ */
 function ajustarEspaciador() {
     const panel = document.getElementById("panel");
     const espaciador = document.getElementById("espaciadorPanel");
@@ -388,6 +394,9 @@ function ajustarEspaciador() {
     }
 }
 
+/* ============================
+    MOSTRAR CURSO
+============================ */
 function mostrar(curso) {
     const panel = document.getElementById("panel");
 

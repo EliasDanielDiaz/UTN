@@ -183,26 +183,7 @@
     RESPONSIVE
 ===================================== */
 @media (max-width: 1024px) {
-  body.fondo-contacto .contacto-container {
-    max-width: 900px;
-    padding: 20px;
-  }
-
-  body.fondo-contacto form {
-    gap: 15px;
-  }
-
-  body.fondo-contacto iframe {
-    height: 350px;
-  }
-
-  body.fondo-contacto .form-inscripcion {
-    gap: 20px 30px;
-  }
-
-  body.fondo-contacto .domicilio-grupo {
-    gap: 15px;
-  }
+  
 }
 
 @media (min-width: 800px) {
