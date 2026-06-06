@@ -8,7 +8,6 @@ body.fondo-cursos main {
     background-size: auto;
     background-position: top left;
     position: relative;
-    
 }
 
 body.fondo-cursos main::before {
