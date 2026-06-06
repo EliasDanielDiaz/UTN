@@ -186,7 +186,7 @@
   
 }
 
-@media (min-width: 800px) {
+@media (min-width: 950px) {
   .form-inscripcion {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -223,7 +223,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .turno-grupo {
     flex-direction: column;
     align-items: flex-start;

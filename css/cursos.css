@@ -157,7 +157,7 @@ body.fondo-cursos #contenedorBotones {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   body.fondo-cursos main {
     padding: 20px;
   }
@@ -192,7 +192,7 @@ body.fondo-cursos #contenedorBotones {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   body.fondo-cursos main {
     padding: 12px;
   }
