@@ -151,6 +151,23 @@
   body.fondo-proceres #panel {
     width: 90%;
   }
+  
+  /* Scroll vertical SOLO en la reseña */
+  .panel-derecha {
+    max-height: 95vh;      /* ocupa 60% de la pantalla */
+    overflow-y: auto;      /* scroll vertical interno */
+    padding-right: 10px;   /* evita que el scroll tape texto */
+  }
+
+  /* Opcional: scrollbar más elegante */
+  .panel-derecha::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .panel-derecha::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+  }
 }
 
 @media (max-width: 550px) {

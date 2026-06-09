@@ -176,7 +176,7 @@ body.fondo-cursos #contenedorBotones {
   }
 
   #horarios table {
-    min-width: 600px; /* o el ancho que necesite tu tabla */
+    min-width: 600px;
   }
 
   #panel {
