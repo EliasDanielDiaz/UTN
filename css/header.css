@@ -199,17 +199,17 @@ nav li a:hover {
 
 @media (max-width: 550px) {
   .logo {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
   }
 
   header .info-escuela h1 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     min-width: 0;
   }
 
   header .info-escuela h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     min-width: 0;
   }
 
