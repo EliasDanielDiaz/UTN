@@ -30,7 +30,7 @@ const cursos = {
       ["Ciencias Sociales", "ZERETZKI, Aurora"],
       ["Construcción de la Ciudadanía", "ROUSSINEAU, Gisela"],
       ["Educación Artística", "ALVARADO, Diego"],
-      ["Educación Física", "GOLD, Víctor / PAVÓN, Georgina"],
+      ["Educación Física", "GOLD, Víctor / MENDEZ CARBALLO, Ezequiel"],
       ["Inglés", "FRAGELLI, María Fernanda"],
       ["Matemática", "SÁNCHEZ, Soledad"],
       ["Prácticas del Lenguaje", "AZUAGA, Iliana"]
@@ -95,9 +95,9 @@ const cursos = {
       ["Construcción de la Ciudadanía", "FUENTES, Alina"],
       ["Educación Artística", "CUADRADO, Silvia"],
       ["Educación Física", "GOLD, Victor / ZICCHERO, Luciana"],
-      ["Físicoquímica", "FLORES SÁNCHEZ, Ismael"],
+      ["Físicoquímica", "FLORES SÁNCHEZ, Ismael / ARAPA, Walter"],
       ["Geografía", "VALDÉZ, Leticia"],
-      ["Historia", "TOMES, Mariano"],
+      ["Historia", "CHIESA, Francisco"],
       ["Inglés", "CARABAJAL, Pamela"],
       ["Matemática", "MACIEL, Daiana"],
       ["Prácticas del Lenguaje", "BIANCHI, Anabel"]
@@ -364,7 +364,7 @@ const cursos = {
     ],
 
     horarios: [
-      ["12:00 a 13:00", "-----", "-----", "-----", "Física Clásica y Moderna", "-----"],
+      ["12:00 a 13:00", "-----", "Física Clásica y Moderna", "-----", "-----", "-----"],
       ["13:00 a 14:00", "Trabajo y Ciudadanía", "Trabajo y Ciudadanía", "Matemática", "Física Clásica y Moderna", "Inglés"],
       ["14:00 a 15:00", "Química del Carbono", "Química del Carbono", "Literatura", "Educación Física", "Inglés"],
       ["15:10 a 16:10", "Biología, Genética y Sociedad", "Ambiente, Desarrollo y Sociedad", "Literatura", "Literatura", "Química del Carbono"],
